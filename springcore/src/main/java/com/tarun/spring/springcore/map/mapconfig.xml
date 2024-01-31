@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="customer" class="com.tarun.spring.springcore.map.Customer">
+		<property name="cId" value="2321" />
+		
+		<property name="products">
+			<map>
+				
+				<!-- Key as attribute value as element -->
+				<entry key="1001">
+					<value>Iphone</value>
+				</entry>
+				
+				<!-- value as attribute key as element -->
+				<entry value="MacBook">
+					<key>
+						<value>1002</value>
+					</key>
+				</entry>
+				
+				<!-- Both Key and Value as elements -->
+				<entry>
+					<key>
+						<value>1003</value>
+					</key>
+					<value>Airpods</value>
+				</entry>
+				
+				<!-- Both Key and Value as attributes -->
+				<entry key="1004" value="IPad" />
+			
+			</map>
+		</property>
+		
+	</bean>
+	
+</beans>
